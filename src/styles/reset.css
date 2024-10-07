@@ -1,0 +1,68 @@
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15; /* Improve readability */
+    -webkit-text-size-adjust: 100%; /* Prevent text size adjustment after orientation change in iOS */
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ol {
+    list-style: none; /* Remove default list styles */
+}
+
+table {
+    border-collapse: collapse; /* Merge table borders */
+    border-spacing: 0; /* Remove default spacing */
+}
+
+img {
+    max-width: 100%; /* Responsive images */
+    height: auto;
+}
+
+button {
+    background: none; /* Remove default button styles */
+    border: none;
+    padding: 0;
+    font: inherit; /* Inherit font styles */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color */
+}
+
+input, textarea, select {
+    font-family: inherit; /* Inherit font styles */
+    font-size: inherit; /* Inherit font size */
+    line-height: inherit; /* Inherit line height */
+}
+
+/* Additional reset for specific elements */
+fieldset {
+    border: none; /* Remove default fieldset border */
+}
+
+legend {
+    display: none; /* Hide legend */
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
+    display: block; /* Ensure semantic elements are displayed */
+}
