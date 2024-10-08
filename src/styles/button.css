@@ -1,0 +1,13 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 0px;
+    background-color: #1b1c1b;
+    border-radius: 4px;
+    transition: 30ms ease-in;
+}
+
+.button:hover {
+    background-color: rgba(27, 28, 27, 0.9);
+}
