@@ -2,7 +2,7 @@ import {
     createBrowserRouter
 } from "react-router-dom";
 import ErrorBoundaryLayout from "./components/ErrorBoundaryLayout";
-import ProductDetails from "./components/ProductDetails";
+import ProductDetails from "./pages/ProductDetails";
 import Welcome from "./components/Welcome";
 import Home from './pages/Home';
 

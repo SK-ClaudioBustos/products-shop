@@ -15,9 +15,6 @@ const ProductItem = ({ product }: ProductItemProps) => {
                     <span>{product.title}</span>
                     <span><b>{"$" + product.price}</b></span>
                 </div>
-                {/* <Button>
-                <AddShoppingCartIcon/>
-            </Button> */}
             </Link>
         </li>
     )

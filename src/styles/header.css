@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search-bar {
+    background-color: #ebebeb;
+    border-radius: 5px;
+    border: 1px solid rgba(37, 36, 36, 0.5);
+    outline: none;
+    color: #000;
+    flex-basis: 60%;
+    padding: 5px;
+    transition: 0.30ms ease-in;
+}
+
+#search-bar:focus {
+    outline: 1px solid #252424;
+    background-color: #e9e4e4;
+}

@@ -8,32 +8,7 @@
   background-color: #ebebeb;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 8vh;
-}
-
 main {
   width: 100%;
-}
-
-body {
   padding: 5vh 6vw;
-}
-
-input {
-  background-color: #ebebeb;
-  border-radius: 5px;
-  border: 1px solid rgba(37, 36, 36,0.5);
-  padding: 5px;
-  outline: none;
-  color: #000;
-  transition: 0.30ms ease-in;
-}
-
-input:focus {
-  outline: 1px solid #252424;
-  background-color: #e9e4e4;
 }

@@ -2,7 +2,7 @@ export interface Product {
     id: number;
     title: string;
     description: string;
-    category: string;
+    category: Category;
     price: number;
     discountPercentage: number;
     rating: number;
@@ -34,4 +34,31 @@ export interface Meta {
     updatedAt: Date;
     barcode: string;
     qrCode: string;
+}
+
+export enum Category {
+    Beauty = "beauty",
+    Fragrances = "fragrances",
+    Furniture = "furniture",
+    Groceries = "groceries",
+    HomeDecoration = "home-decoration",
+    KitchenAccessories = "kitchen-accessories",
+    Laptops = "laptops",
+    MensShirts = "mens-shirts",
+    MensShoes = "mens-shoes",
+    MensWatches = "mens-watches",
+    MobileAccessories = "mobile-accessories",
+    Motorcycle = "motorcycle",
+    SkinCare = "skin-care",
+    Smartphones = "smartphones",
+    SportsAccessories = "sports-accessories",
+    Sunglasses = "sunglasses",
+    Tablets = "tablets",
+    Tops = "tops",
+    Vehicle = "vehicle",
+    WomensBags = "womens-bags",
+    WomensDresses = "womens-dresses",
+    WomensJewellery = "womens-jewellery",
+    WomensShoes = "womens-shoes",
+    WomensWatches = "womens-watches"
 }

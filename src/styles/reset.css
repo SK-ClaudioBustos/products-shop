@@ -53,6 +53,6 @@ legend {
     display: none; /* Hide legend */
 }
 
-article, aside, details, figcaption, figure, footer, header, main, nav, section {
+article, aside, details, figcaption, figure, footer, main, nav, section {
     display: block; /* Ensure semantic elements are displayed */
 }

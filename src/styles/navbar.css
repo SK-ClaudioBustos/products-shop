@@ -1,0 +1,27 @@
+#navbar-container {
+    background-color: #c1c2c3;
+    color: #020202;
+    padding: 1.5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#navbar-items {
+    display: flex;
+    align-items: baseline;
+    justify-content: start;
+}
+
+.navbar-item{
+    padding: 1px;
+    color: #5e5e5e;
+}
+
+.navbar-item:hover {
+    color: #7d7878;
+    cursor: pointer;
+}
+
+.item-selected {
+    color: #393a3a;
+}
