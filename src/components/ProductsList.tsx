@@ -24,7 +24,8 @@ const ProductsList = () => {
             });
     }, [search]);
 
-    if (loading) return <Loading descripcion='Cargando Productos' />;
+    if (loading) return <Loading descripcion='Cargando Stock' />;
+    
     return (
         <ul className='products-list'>
             {

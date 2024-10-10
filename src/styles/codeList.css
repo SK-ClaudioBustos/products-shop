@@ -1,0 +1,17 @@
+table {
+    border: 1px solid #000;
+}
+
+th[scope="col"] {
+    padding: 5px 0px;
+    text-align: start;
+    background-color: rgb(197, 214, 214);
+}
+
+tr:nth-of-type(even) td {
+    background-color: #beb8b8;
+}
+
+tr:nth-of-type(odd) td {
+    background-color: #8c8787;
+}
