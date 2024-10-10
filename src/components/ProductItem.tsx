@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../styles/productItem.css";
 import { type Product } from "../types";
 
@@ -8,15 +7,15 @@ interface ProductItemProps {
 
 const ProductItem = ({ product }: ProductItemProps) => {
     return (
-        <li className="product-item">
-            <Link to={`/producto/${product.id}`}>
+        <>
+            <li className="product-item">
                 <img src={product.thumbnail} alt={product.title} />
                 <div className="product-details">
-                    <span>{product.title}</span>
-                    <span><b>{`Cantidad: ${product.stock}`}</b></span>
+                    <span style={{ color: "#000" }}>{product.title}</span>
+                    <span style={{ color: "#000" }}><b>{`Cantidad: ${product.stock}`}</b></span>
                 </div>
-            </Link>
-        </li>
+            </li>
+        </>
     )
 }
 

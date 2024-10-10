@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Product } from "../types";
 import Loading from "../utils/Loading";
+import Button from "../utils/Button";
 
 const ProductDetails = () => {
     const { id } = useParams();
@@ -29,6 +30,7 @@ const ProductDetails = () => {
                 <h2><b>{`$${dataProducto?.price}`}</b></h2>
                 <p>{dataProducto?.description}</p>
             </div>
+            <Button label="Volver atrás" handleOnClick={() => window.history.back()}/>
         </div>
     )
 }
