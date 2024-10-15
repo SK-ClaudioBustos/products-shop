@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Product } from "../types";
 import Loading from "../utils/Loading";
 
@@ -26,11 +25,7 @@ const PricesList = () => {
                 <span><b>Precio</b></span>
             </li>
             {
-                items.length > 0 && items.map((item: Product) =>
-                    <Link key={item.id} to={`/producto/${item.id}`}>
-                        <ListItem key={item.id} name={item.title} price={item.price} />
-                    </Link>
-                )
+                items.length > 0 && items.map((item: Product) => <ListItem key={item.id} name={item.title} price={item.price} />)
             }
         </ul>
     )
