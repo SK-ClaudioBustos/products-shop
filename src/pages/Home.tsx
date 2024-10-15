@@ -7,14 +7,14 @@ import "../styles/home.css";
 const Home = () => {
     return (
         <ProductShopProvider>
-            <div id="home-content">
-                <Navbar />
-                <main>
-                    <Header />
+            <main>
+                <Header />
+                <div id="home-content">
+                    <Navbar />
                     <ProductsList />
-                    <footer></footer>
-                </main>
-            </div>
+                </div>
+                <footer></footer>
+            </main>
         </ProductShopProvider>
     )
 }
