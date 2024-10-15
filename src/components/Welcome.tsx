@@ -3,9 +3,10 @@ import "../styles/welcome.css";
 const Welcome = () => {
     return (
         <div className='welcome-container'>
-            <h1>Prototipo de Gestor de Productos</h1>
+            <h1>Bienvenidos a mi pagina</h1>
+            <h3>Está pagina es un carrito de compras hecho por mí</h3>
             <Link to="/inicio">
-                <span className="enlace">Ir al Gestor</span>
+                <span className="enlace">Ir a la tienda</span>
             </Link>
         </div>
     )

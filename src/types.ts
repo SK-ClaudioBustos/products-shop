@@ -62,9 +62,3 @@ export enum Category {
     WomensShoes = "womens-shoes",
     WomensWatches = "womens-watches"
 }
-
-export enum TabValue {
-    ProductsStock = "products_stock",
-    ProductsPrices = "products_prices",
-    ProductsCodes = "products_codes"
-}

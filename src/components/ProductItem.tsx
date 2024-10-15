@@ -13,7 +13,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
                 <img src={product.thumbnail} alt={product.title} />
                 <div className="product-details">
                     <span>{product.title}</span>
-                    <span><b>{`Cantidad: ${product.stock}`}</b></span>
+                    <span><b>{"$" + product.price}</b></span>
                 </div>
             </Link>
         </li>

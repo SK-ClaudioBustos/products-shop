@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import { TabValue } from "../types";
+import { Category } from "../types";
 
 const ProductShopContext = createContext<ProductShopData | undefined>(undefined);
 
@@ -9,29 +9,29 @@ interface ProductShopProviderProps {
 
 interface ProductShopData {
     search: string;
-    tab: TabValue;
+    category: Category | null;
     handleSearch: (data: string) => void
-    handleChangeTab: (tab: TabValue) => void
+    handleCategorySelected: (category: Category) => void
 }
 
 const ProductShopProvider: React.FC<ProductShopProviderProps> = (props: ProductShopProviderProps) => {
     const { children } = props;
     const [search, setSearch] = useState<string>("");
-    const [tab, setTab] = useState<TabValue>(TabValue.ProductsStock);
+    const [category, setCategory] = useState<Category | null>(null);
 
     // functions
     const handleSearch = (data: string) => {
         setSearch(data);
     }
-    const handleChangeTab = (tab: TabValue) => {
-        setTab(tab);
+    const handleCategorySelected = (category: Category) => {
+        setCategory(category);
     }
 
     const initialValue: ProductShopData = {
         search,
-        tab,
+        category,
         handleSearch,
-        handleChangeTab
+        handleCategorySelected
     };
 
     return <ProductShopContext.Provider value={initialValue}>{children}</ProductShopContext.Provider>

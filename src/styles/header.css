@@ -1,15 +1,9 @@
 header {
     display: flex;
-    flex-direction: column;
-    margin-bottom: 8vh;
-}
-
-.header-content {
-    display: flex;
     flex-direction: row;
+    margin-bottom: 8vh;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
 }
 
 #search-bar {
