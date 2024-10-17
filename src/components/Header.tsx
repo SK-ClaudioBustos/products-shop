@@ -1,5 +1,6 @@
 import { useProductShopContext } from "../context/ProductsShopContext";
 import "../styles/header.css";
+
 const Header = () => {
     const { handleSearch } = useProductShopContext();
     return (

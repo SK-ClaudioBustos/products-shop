@@ -1,5 +1,6 @@
 header {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     padding: 2vw;
     margin-bottom: 8vh;

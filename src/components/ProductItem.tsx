@@ -10,10 +10,10 @@ const ProductItem = ({ product }: ProductItemProps) => {
     return (
         <li className="product-item">
             <Link to={`/producto/${product.id}`}>
-                <img src={product.thumbnail} alt={product.title} />
+                <img src={product.pictures.stack.normal} alt={product.title} />
                 <div className="product-details">
                     <span>{product.title}</span>
-                    <span><b>{"$" + product.price}</b></span>
+                    <span><b>{"$" + product.price.amount}</b></span>
                 </div>
             </Link>
         </li>

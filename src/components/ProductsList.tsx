@@ -8,24 +8,36 @@ import ProductItem from './ProductItem';
 const ProductsList = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
+    const [error, setError] = useState<boolean>(false);
     const { search } = useProductShopContext();
 
     useEffect(() => {
-        let API_URL = "https://dummyjson.com/products";
-        if (search) {
-            API_URL += `/search?q=${search}`;
-        }
+        const API_URL = 'https://mercado-libre4.p.rapidapi.com/search?country=AR&search=computadoras&offset=0&limit=20';
+        const options = {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': '82d63789eamshac8b43341a8f8b8p14a07ajsnf2df6ee7c23a',
+                'x-rapidapi-host': 'mercado-libre4.p.rapidapi.com'
+            }
+        };
         setLoading(true);
-        fetch(API_URL)
-            .then(res => res.json())
+        fetch(API_URL, options)
             .then(res => {
-                setProducts(res.products)
+                if (!res.ok) {
+                    setError(true);
+                }
+                return res.json();
+            })
+            .then(res => {
+                setProducts(res.results);
                 setLoading(false);
-            });
+            })
+            .catch(() => setError(true));
     }, [search]);
 
     if (loading) return <div className='loading-container'><Loading descripcion='Cargando Productos' /></div>;
-    
+    if (error) return <div><span>Ocurrio un error</span></div>;
+
     return (
         <ul className='products-list'>
             {
