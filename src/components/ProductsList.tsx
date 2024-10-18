@@ -12,7 +12,8 @@ const ProductsList = () => {
     const { search } = useProductShopContext();
 
     useEffect(() => {
-        const API_URL = 'https://mercado-libre4.p.rapidapi.com/search?country=AR&search=computadoras&offset=0&limit=20';
+        const LIMIT = 5;
+        const API_URL = `https://mercado-libre4.p.rapidapi.com/search?country=AR&search=${search}&offset=0&limit=${LIMIT}`;
         const options = {
             method: 'GET',
             headers: {
@@ -29,7 +30,7 @@ const ProductsList = () => {
                 return res.json();
             })
             .then(res => {
-                setProducts(res.results);
+                setProducts(res.results.slice(0,2));
                 setLoading(false);
             })
             .catch(() => setError(true));

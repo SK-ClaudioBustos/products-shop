@@ -3,23 +3,27 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     padding: 2vw;
-    margin-bottom: 8vh;
+    margin-bottom: 1.5vh;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--secondary);
+}
+
+header h1 {
+    color: #fff;
 }
 
 #search-bar {
-    background-color: #ebebeb;
+    background-color: var(--background);
     border-radius: 5px;
     border: 1px solid rgba(37, 36, 36, 0.5);
     outline: none;
     color: #000;
-    flex-basis: 60%;
+    flex-basis: 70%;
     padding: 5px;
     transition: 0.30ms ease-in;
 }
 
 #search-bar:focus {
-    outline: 1px solid #252424;
-    background-color: #e9e4e4;
+    background-color: #fff;
 }

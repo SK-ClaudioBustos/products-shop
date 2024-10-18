@@ -1,0 +1,27 @@
+#footer {
+    color: #fff;
+    background-color: var(--secondary);
+}
+
+.footer-items {
+    padding: 3vh 0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item .enlace {
+    font-size: 0.8rem;
+}
+
+#copy {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.8rem;
+}

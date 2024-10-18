@@ -1,15 +1,19 @@
-.products-list {
-    display: grid;
-    width: 100%;
-    grid-gap: 4vh 5vw;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin: 5px 10px;
-}
-
 .loading-container {
-    height: "100vh";
-    width: 100%;
     display: "flex";
     justify-content: "center";
     align-items: "center";
+    width: 100%;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 80%;
+
+    /* padding: 10px; */
+    /* display: grid;
+    grid-gap: 4vh 5vw;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 5px 10px; */
 }

@@ -13,7 +13,7 @@ interface ProductShopData {
 
 const ProductShopProvider: React.FC<ProductShopProviderProps> = (props: ProductShopProviderProps) => {
     const { children } = props;
-    const [search, setSearch] = useState<string>("");
+    const [search, setSearch] = useState<string>("computadoras");
 
     // functions
     const handleSearch = (data: string) => {

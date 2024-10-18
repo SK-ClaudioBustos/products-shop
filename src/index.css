@@ -3,7 +3,19 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --secondary: #ec5959;
+  --background: #f1f1f1;
+
   color-scheme: light dark;
   color: #252424;
-  background-color: #ebebeb;
+  background-color: var(--background);
+}
+
+.enlace {
+  color: rgb(62, 66, 66);
+  text-decoration: none;
+}
+
+.enlace:hover {
+  text-decoration: underline;
 }

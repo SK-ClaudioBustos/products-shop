@@ -1,12 +1,6 @@
-
-.welcome-container{
+.welcome-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-.enlace{
-    color: rgb(62, 66, 66);
-    text-decoration: underline;
 }

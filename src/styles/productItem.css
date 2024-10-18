@@ -1,19 +1,30 @@
 .product-item {
     display: flex;
-    flex-direction: column;
-    background-color: #c1c1c1;
+    flex-direction: row;
+    background-color: #fff;
     border-radius: 5px;
-    padding: 5px;
-    text-align: center;
+    padding: 1vw;
+    margin-bottom: 5px;
 }
 
 .product-details {
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 5px;
 }
 
-.product-details span {
-    font-size: 1rem;
+.product-price {
+    color: rgb(9, 124, 9);
+    font-size: 1.3rem;
+}
+
+.product-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 img {

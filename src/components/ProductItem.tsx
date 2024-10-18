@@ -8,12 +8,12 @@ interface ProductItemProps {
 
 const ProductItem = ({ product }: ProductItemProps) => {
     return (
-        <li className="product-item">
-            <Link to={`/producto/${product.id}`}>
+        <li>
+            <Link className="product-item" to={`/producto/${product.id}`}>
                 <img src={product.pictures.stack.normal} alt={product.title} />
                 <div className="product-details">
-                    <span>{product.title}</span>
-                    <span><b>{"$" + product.price.amount}</b></span>
+                    <p className="product-title">{product.title}</p>
+                    <span className="product-price">{"$" + product.price.amount}</span>
                 </div>
             </Link>
         </li>
