@@ -1,16 +1,29 @@
 header {
+    background-color: var(--secondary);
+    padding: 2vw 2vw 0px 2vw;
+    margin-bottom: 10vh;
+}
+
+#search-section {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding: 2vw;
-    margin-bottom: 1.5vh;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary);
+}
+
+#sections-tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     color: #fff;
+}
+
+#search {
+    flex-basis: 70%;
 }
 
 #search-bar {
@@ -19,7 +32,7 @@ header h1 {
     border: 1px solid rgba(37, 36, 36, 0.5);
     outline: none;
     color: #000;
-    flex-basis: 70%;
+    width: 100%;
     padding: 5px;
     transition: 0.30ms ease-in;
 }

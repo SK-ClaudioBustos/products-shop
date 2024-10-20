@@ -4,9 +4,12 @@
 }
 
 .footer-items {
-    padding: 3vh 0px;
+    padding: 5vh 0px 4vh 0px;
     display: flex;
     justify-content: space-around;
+}
+
+.footer-items span {
     font-size: 1rem;
 }
 
