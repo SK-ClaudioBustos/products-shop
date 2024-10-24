@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import { Tab } from "../data/tabs_data";
 
 const ProductShopContext = createContext<ProductShopData | undefined>(undefined);
 
@@ -7,22 +8,22 @@ interface ProductShopProviderProps {
 }
 
 interface ProductShopData {
-    search: string;
-    handleSearch: (data: string) => void
+    tab: string;
+    handleChangeTab: (data: Tab) => void
 }
 
 const ProductShopProvider: React.FC<ProductShopProviderProps> = (props: ProductShopProviderProps) => {
     const { children } = props;
-    const [search, setSearch] = useState<string>("computadoras");
+    const [tab, setTab] = useState<Tab>(Tab.Ninguna);
 
     // functions
-    const handleSearch = (data: string) => {
-        setSearch(data);
+    const handleChangeTab = (tab: Tab) => {
+        setTab(tab);
     }
 
     const initialValue: ProductShopData = {
-        search,
-        handleSearch,
+        tab,
+        handleChangeTab,
     };
 
     return <ProductShopContext.Provider value={initialValue}>{children}</ProductShopContext.Provider>

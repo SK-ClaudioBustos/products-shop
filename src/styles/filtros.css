@@ -1,0 +1,24 @@
+#price-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem 0px;
+    margin-bottom: 20px;
+}
+
+#price-filter span {
+    font-weight: 300;
+    color: #222;
+}
+
+#price-filter p {
+    font-weight: 800;
+    color: #222;
+}
+
+.filters {
+    color: #222020;
+    padding: 4px 8px;
+    background-color: var(--background);
+    border-radius: 15px;
+    border: 1px solid #848586;
+}

@@ -1,39 +1,13 @@
 import "../styles/tabs.css";
-import Tab from "./Tab";
-
-const TABS = [
-    {
-        label: "Computadoras",
-        value: "computadoras",
-    },
-    {
-        label: "Celulares",
-        value: "celulares",
-    },
-    {
-        label: "Auriculares",
-        value: "auriculares",
-    },
-    {
-        label: "NoteBooks",
-        value: "notebooks",
-    },
-    {
-        label: "Tablets",
-        value: "tablets",
-    },
-    {
-        label: "Teclados",
-        value: "teclados",
-    },
-]
+import TabItem from "./TabItem";
+import TABS from "../data/tabs_data";
 
 const CabeceraTabs = () => {
     return (
         <div id="sections-tabs">
             {
                 TABS.map((tab) => (
-                    <Tab {...tab} />
+                    <TabItem key={tab} value={tab} />
                 ))
             }
         </div>

@@ -1,7 +1,11 @@
 header {
     background-color: var(--secondary);
     padding: 2vw 2vw 0px 2vw;
-    margin-bottom: 10vh;
+}
+
+header h1 i {
+    color: #fff;
+    font-style: normal;
 }
 
 #search-section {
@@ -10,33 +14,4 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-#sections-tabs {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    color: #fff;
-}
-
-#search {
-    flex-basis: 70%;
-}
-
-#search-bar {
-    background-color: var(--background);
-    border-radius: 5px;
-    border: 1px solid rgba(37, 36, 36, 0.5);
-    outline: none;
-    color: #000;
-    width: 100%;
-    padding: 5px;
-    transition: 0.30ms ease-in;
-}
-
-#search-bar:focus {
-    background-color: #fff;
 }

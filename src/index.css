@@ -1,5 +1,5 @@
 :root {
-  font-family: sans-serif;
+  font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +11,10 @@
   background-color: var(--background);
 }
 
+main {
+  min-height: 90vh;
+}
+
 .enlace {
   color: rgb(62, 66, 66);
   text-decoration: none;
@@ -18,4 +22,12 @@
 
 .enlace:hover {
   text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
 }

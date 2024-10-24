@@ -1,5 +1,5 @@
-#home-content {
+#search-content {
     display: flex;
     flex-direction: row;
-    min-height: 90vh;
+    padding: 5vh 0px;
 }

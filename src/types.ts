@@ -207,3 +207,44 @@ export interface Variations {
     label: string;
 }
 
+export interface Filter {
+    id:              string;
+    name:            string;
+    type:            string;
+    values:          FilterValue[];
+    modal:           Modal;
+    fragment:        string;
+    expanded_values: Value[];
+    show_modal:      boolean;
+}
+
+export interface FilterValue {
+    id:                 string;
+    name:               string;
+    accessibility_text: string;
+    url:                string;
+    fragment:           string;
+    results:            number;
+    title:              Title;
+    switch:             Switch;
+}
+
+export interface Switch {
+    is_on: boolean;
+}
+
+export interface Title {
+    text:  string;
+    icons: any[];
+}
+
+export interface Modal {
+    type:   string;
+    labels: Labels;
+}
+
+export interface Labels {
+    modal_not_found_message: string;
+    modal_label:             string;
+    modal_place_holder:      string;
+}
