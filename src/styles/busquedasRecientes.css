@@ -1,0 +1,22 @@
+#seccion-busquedas-recientes {
+    margin: 4rem 2rem;
+}
+
+#title-busquedas-recientes {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+#title-busquedas-recientes span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#grilla-busqueda-recientes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}

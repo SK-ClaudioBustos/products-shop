@@ -1,0 +1,20 @@
+.variation-label-selected {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#variations-section {
+    width: 50%;
+}
+
+#variation-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(52px, 1fr));
+    column-gap: 0rem;
+}
+
+#variation-container .variation-item .mini-image {
+    width: 40px;
+    height: auto;
+}

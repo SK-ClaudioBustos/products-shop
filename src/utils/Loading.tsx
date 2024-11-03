@@ -1,13 +1,16 @@
-import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
+import "../styles/loading.css";
 
 interface LoadingProps {
-    descripcion: string
+    descripcion?: string
 }
-const Loading = ({ descripcion }: LoadingProps) => {
+const Loading = ({ descripcion = "Cargando" }: LoadingProps) => {
     return (
         <div className='container'>
-            <HourglassEmptyIcon fontSize='large' />
-            <span>{descripcion}</span>
+            <span className='loading-description'><b>{descripcion}</b></span>
+            <div className="circular-loading">
+                <div className='loading-point'></div>
+                <div className='loading-point'></div>
+            </div>
         </div>
     )
 }

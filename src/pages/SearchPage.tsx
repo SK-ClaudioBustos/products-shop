@@ -1,12 +1,12 @@
 import { useLoaderData } from "react-router-dom";
-import FilterMenu from "../components/FilterMenu";
-import ProductsList from "../components/ProductsList";
+import FilterMenu from "../components/search-page/FilterMenu";
+import ProductsList from "../components/search-page/ProductsList";
 import useFetchProducts from "../lib/useFetchProducts";
 import "../styles/search.css";
 import Error from "../utils/Error";
 import Loading from "../utils/Loading";
 
-const Search = () => {
+const SearchPage = () => {
     const { search } = useLoaderData() as any;
 
     const {
@@ -15,7 +15,7 @@ const Search = () => {
         error
     } = useFetchProducts({ search });
 
-    if (loading) return <Loading descripcion='Cargando Productos' />;
+    if (loading) return <Loading />;
     if (error) return <Error />;
 
     return (
@@ -26,4 +26,4 @@ const Search = () => {
     )
 }
 
-export default Search
+export default SearchPage

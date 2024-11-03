@@ -1,17 +1,12 @@
 header {
     background-color: var(--secondary);
-    padding: 2vw 2vw 0px 2vw;
-}
-
-header h1 i {
-    color: #fff;
-    font-style: normal;
-}
-
-#search-section {
+    height: 3rem;
+    padding: 5px 2vw;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+}
+
+header h1 {
+    color: inherit;
 }

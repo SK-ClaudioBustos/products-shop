@@ -3,6 +3,22 @@
     color: #020202;
     padding: 1.2vw;
     border-radius: 5px;
-    margin: 1vw;
+    margin-right: 1vw;
     width: 20%;
+    height: max-content;
+}
+
+.filter-container {
+    margin: 4vh 0px;
+}
+
+.filters-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+}
+
+.filter-option {
+    color: #000;
+    font-size: 0.9rem;
 }

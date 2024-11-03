@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Filter, Product } from "../types";
+import { Filter, Product } from "../types/product";
 
 type Data = {
     products: Product[],
@@ -31,7 +31,7 @@ function useFetchProducts({ search }: useFetchProps): FetchResults {
 
     useEffect(() => {
         const LIMIT = 5;
-        const API_URL = `${import.meta.env.VITE_API_URL}&search=${search}&offset=0&limit=${LIMIT}`;
+        const API_URL = `${import.meta.env.VITE_API_URL}/search?country=AR&search=${search}&offset=0&limit=${LIMIT}`;
         const options = {
             method: 'GET',
             headers: {

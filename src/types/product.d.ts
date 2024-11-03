@@ -32,7 +32,6 @@ export interface Product {
     item_highlight:     Highlight;
     pictures_quantity:  number;
     is_ad:              boolean;
-    subtitles:          Subtitles;
 }
 
 export interface BottomPill {
@@ -198,9 +197,6 @@ export interface Address {
 export interface Shipping {
     promise:  Promise;
     benefits: any[];
-}
-
-export interface Subtitles {
 }
 
 export interface Variations {

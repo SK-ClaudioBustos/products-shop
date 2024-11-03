@@ -1,0 +1,9 @@
+.welcome-content {
+    height: 100vh;
+    background-image: url("/img/background.webp");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+}

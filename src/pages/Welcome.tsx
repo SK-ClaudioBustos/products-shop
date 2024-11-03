@@ -1,9 +1,15 @@
 
+import BusquedasRecientesSeccion from "../components/BusquedasRecientesSeccion";
+import "../styles/welcome.css";
+
 const Welcome = () => {
+
     return (
-        <div className='container'>
-            <h1>Bienvenidos a mi pagina, es un carrito de compras hecho por mí</h1>
-            <h3>Para empezar a navegar puedes usar la barra de búsqueda o seleccionar alguna categoría</h3>
+        <div>
+            <section className='welcome-content'>
+                <h1>Product-Shop</h1>
+            </section>
+            <BusquedasRecientesSeccion />
         </div>
     )
 }

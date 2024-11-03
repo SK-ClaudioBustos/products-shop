@@ -1,5 +1,5 @@
-import "../styles/productsList.css";
-import { type Product } from '../types';
+import "../../styles/productsList.css";
+import { type Product } from '../../types/product';
 import ProductItem from './ProductItem';
 
 interface ProductsListProps {

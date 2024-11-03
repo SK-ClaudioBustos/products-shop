@@ -1,5 +1,4 @@
-import { NavLink } from "react-router-dom";
-import { useProductShopContext } from "../context/ProductsShopContext";
+import { NavLink, useLoaderData } from "react-router-dom";
 import { Tab } from "../data/tabs_data";
 import "../styles/tabs.css";
 
@@ -8,19 +7,15 @@ interface TabProps {
 }
 
 const TabItem = ({ value }: TabProps) => {
-    const { tab, handleChangeTab } = useProductShopContext();
-
-    const handleTabSelected = () => {
-        handleChangeTab(value);
-    }
+    const { search } = useLoaderData() as any;
 
     return (
-        <NavLink to={`./categoria/${tab}`}>
-            <div className="tab-container" role="button" onClick={handleTabSelected}>
-                <span className={value === tab ? "tab-selected" : "tab"}>
+        <NavLink to={`./busqueda/${value}`}>
+            <div className="tab-container">
+                <span className={value === search ? "tab-selected" : "tab"}>
                     {value}
                 </span>
-                <div className={value === tab ? "tab-underline-selected" : "tab-underline"}></div>
+                <div className={value === search ? "tab-underline-selected" : "tab-underline"}></div>
             </div>
         </NavLink>
     )

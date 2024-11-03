@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
-import "../styles/productItem.css";
-import { type Product } from "../types";
+import "../../styles/productItem.css";
+import { type Product } from "../../types/product";
 
 interface ProductItemProps {
     product: Product
@@ -9,13 +8,13 @@ interface ProductItemProps {
 const ProductItem = ({ product }: ProductItemProps) => {
     return (
         <li>
-            <Link className="product-item" to={`/producto/${product.id}`}>
-                <img src={product.pictures.stack.normal} alt={product.title} />
+            <a className="product-item" href={`/producto/${product.product?.id}`}>
+                <img className="product-img" src={product.pictures.stack.normal} alt={product.title} />
                 <div className="product-details">
                     <p className="product-title">{product.title}</p>
                     <span className="product-price">{"$" + product.price.amount}</span>
                 </div>
-            </Link>
+            </a>
         </li>
     )
 }

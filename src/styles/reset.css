@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -11,48 +10,11 @@ html {
     -webkit-text-size-adjust: 100%; /* Prevent text size adjustment after orientation change in iOS */
 }
 
-ul, ol {
-    list-style: none; /* Remove default list styles */
-}
-
-table {
-    border-collapse: collapse; /* Merge table borders */
-    border-spacing: 0; /* Remove default spacing */
-}
-
-img {
-    max-width: 100%; /* Responsive images */
-    height: auto;
-}
-
-button {
-    background: none; /* Remove default button styles */
-    border: none;
-    padding: 0;
-    font: inherit; /* Inherit font styles */
-    cursor: pointer; /* Show pointer cursor on hover */
-}
-
 a {
-    text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit color */
+    text-decoration: none;
+    color: #000;
 }
 
-input, textarea, select {
-    font-family: inherit; /* Inherit font styles */
-    font-size: inherit; /* Inherit font size */
-    line-height: inherit; /* Inherit line height */
-}
-
-/* Additional reset for specific elements */
-fieldset {
-    border: none; /* Remove default fieldset border */
-}
-
-legend {
-    display: none; /* Hide legend */
-}
-
-article, aside, details, figcaption, figure, footer, main, nav, section {
-    display: block; /* Ensure semantic elements are displayed */
+li {
+    list-style: none;
 }

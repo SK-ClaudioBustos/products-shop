@@ -1,11 +1,10 @@
 #search {
-    flex-basis: 70%;
+    width: 500px;
 }
 
 #form-search {
     display: flex;
     flex-direction: row;
-    font-size: 0.8rem;
 }
 
 #search-bar {
@@ -20,13 +19,22 @@
     width: 100%;
     padding: 5px 10px;
     transition: 0.30ms ease-in;
+    font-size: 1rem;
 }
 
 .button-search {
     display: flex;
     align-items: center;
-    color: #000;
+    color: #c1c1c1;
     background-color: var(--background);
+}
+
+.button-search:hover {
+    color: var(--secondary);
+}
+
+#form-search:focus-within .button-search {
+    color: var(--secondary);
 }
 
 #reset-button {

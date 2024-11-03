@@ -3,20 +3,17 @@
   line-height: 1.5;
   font-weight: 400;
 
-  --secondary: #ec5959;
   --background: #f1f1f1;
+  --secondary: #ff9901;
+  --tertiary: #3e4242;
 
   color-scheme: light dark;
   color: #252424;
   background-color: var(--background);
 }
 
-main {
-  min-height: 90vh;
-}
-
 .enlace {
-  color: rgb(62, 66, 66);
+  color: var(--tertiary);
   text-decoration: none;
 }
 

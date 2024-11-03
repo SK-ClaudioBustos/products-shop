@@ -7,6 +7,7 @@ import "../styles/searchBar.css";
 const SearchBar = () => {
     const [search, setSearch] = useState<string>("");
     const [error, setError] = useState<boolean>(false);
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         if (!search) {
             setError(true);
@@ -15,6 +16,7 @@ const SearchBar = () => {
             setError(false);
         }
     }
+
     return (
         <search id="search">
             <Form onSubmit={handleSubmit} action="./busqueda" >
@@ -28,9 +30,13 @@ const SearchBar = () => {
                         placeholder="Buscar productos..."
                         onChange={(event) => setSearch(event.target.value)}
                     />
-                    <button id='reset-button' onClick={() => setSearch("")} className='button-search' type="button">
-                        <ClearIcon />
-                    </button>
+                    {
+                        search && (
+                            <button id='reset-button' onClick={() => setSearch("")} className='button-search' type="button">
+                                <ClearIcon />
+                            </button>
+                        )
+                    }
                     <button id='search-button' className='button-search' type="submit">
                         <SearchIcon />
                     </button>

@@ -1,5 +1,5 @@
 #search-content {
     display: flex;
-    flex-direction: row;
-    padding: 5vh 0px;
+    justify-content: center;
+    margin: 3vh 0;
 }

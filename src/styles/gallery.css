@@ -1,0 +1,52 @@
+.gallery-container {
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    width: 50%;
+}
+
+.container-back-button {
+    display: flex;
+    justify-content: start;
+}
+
+#images-gallery {
+    display: inline;
+}
+
+#images-gallery div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    overflow: auto;
+}
+
+#images-gallery img {
+    width: 50px;
+    height: auto;
+}
+
+.mini-image {
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #c1c1c1;
+}
+
+.mini-image-selected {
+    border: 2px solid #0099ff;
+}
+
+.mini-image:hover {
+    filter: brightness(90%);
+}
+
+.image-container {
+    margin: 0px 5vw;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 380px;
+    object-fit: contain;
+}

@@ -1,0 +1,25 @@
+#product-details {
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    min-width: max-content;
+    max-width: 80vw;
+    padding: 2vw;
+}
+
+.back-button-container {
+    display: flex;
+    justify-content: start;
+}
+
+#back-button {
+    color: #000;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.components-container {
+    display: flex;
+    flex-wrap: wrap;
+}
