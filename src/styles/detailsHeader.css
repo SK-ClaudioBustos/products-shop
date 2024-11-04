@@ -3,6 +3,7 @@
     margin-top: 25px;
     border-radius: 5px 5px 0px 0px;
     padding: 20px 10px;
+    min-height: 3rem;
 }
 
 .details-header span {
