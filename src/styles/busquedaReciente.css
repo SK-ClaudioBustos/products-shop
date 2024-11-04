@@ -6,6 +6,7 @@
     flex-direction: column;
     padding: 2vw;
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 .busqueda-reciente:hover {
@@ -17,7 +18,7 @@
     height: auto;
     max-height: 150px;
     object-fit: contain;
-    border-radius: 4px;
+    flex-grow: 2;
 }
 
 .busqueda-reciente span {
@@ -25,6 +26,7 @@
     color: #8e8484;
     margin-top: 10px;
     display: -webkit-box;
+    line-clamp: 2;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "../styles/busquedaReciente.css";
 import { Product } from '../types/product';
 
@@ -7,18 +6,18 @@ type BusquedaRecienteProps = {
 }
 
 const BusquedaReciente = ({ product }: BusquedaRecienteProps) => {
-    console.log(product)
+    const handleClick = () => {
+        location.href = `/producto/${product.product.id}`;
+    }
     return (
-        <Link to={`/producto/${product.product.id}`}>
-            <div className='busqueda-reciente'>
-                <img
-                    src={product.pictures.stack.retina}
-                    alt={product.pictures.stack.tags.alt}
-                />
-                <span>{product.product.name}</span>
-                <p>${product.price.amount}</p>
-            </div>
-        </Link>
+        <div className='busqueda-reciente' role="link" onClick={handleClick}>
+            <img
+                src={product.pictures.stack.retina}
+                alt={product.pictures.stack.tags.alt}
+            />
+            <span>{product.product.name}</span>
+            <p>${product.price.amount}</p>
+        </div>
     )
 }
 
