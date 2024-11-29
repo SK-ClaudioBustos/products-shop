@@ -1,7 +1,6 @@
 .gallery-container {
-    border-radius: 0px 0px 5px 5px;
     display: flex;
-    width: 50%;
+    justify-content: space-between;
 }
 
 .container-back-button {
@@ -41,6 +40,8 @@
 }
 
 .image-container {
+    width: 400px;
+    height: 400px;
     margin: 0px 5vw;
 }
 

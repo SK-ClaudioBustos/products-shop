@@ -17,7 +17,7 @@ type FetchComponentsDataResult = {
     error: boolean
 }
 
-function useFetchComponentsData({ id }: useFetchParams): FetchComponentsDataResult {
+export function useFetchComponentsData({ id }: useFetchParams): FetchComponentsDataResult {
     const [components, setComponents] = useState<ProductDetailsComponent[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<boolean>(false);
@@ -54,5 +54,3 @@ function useFetchComponentsData({ id }: useFetchParams): FetchComponentsDataResu
         error
     }
 }
-
-export default useFetchComponentsData;

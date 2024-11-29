@@ -8,7 +8,7 @@ interface GalleryProps {
   first_picture: Picture | undefined
 }
 
-const Gallery = ({ component, picture_config, first_picture }: GalleryProps) => {
+export const Gallery = ({ component, picture_config, first_picture }: GalleryProps) => {
   const [imageOnFocus, setImageOnFocus] = useState<Picture | undefined>(first_picture);
   return (
     <section className="gallery-container" aria-label={component.accessibility_text}>
@@ -49,5 +49,3 @@ const Gallery = ({ component, picture_config, first_picture }: GalleryProps) => 
     </section>
   )
 }
-
-export default Gallery

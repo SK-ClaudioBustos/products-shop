@@ -1,17 +1,13 @@
 
-import BusquedasRecientesSeccion from "../components/BusquedasRecientesSeccion";
+import { BusquedasRecientesSeccion } from "../components";
 import "../styles/welcome.css";
 
-const Welcome = () => {
+export const Welcome = () => {
 
     return (
-        <div>
-            <section className='welcome-content'>
-                <h1>Product-Shop</h1>
-            </section>
+        <section className='welcome-content'>
+            <h1>Product-Shop</h1>
             <BusquedasRecientesSeccion />
-        </div>
+        </section>
     )
 }
-
-export default Welcome

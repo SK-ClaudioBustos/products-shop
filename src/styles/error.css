@@ -1,6 +1,16 @@
 .error-container {
     display: flex;
+    padding-top: 2rem;
     flex-direction: column;
-    justify-content: start;
     align-items: center;
+    height: 100vh;
+}
+
+.error-container>:first-child {
+    width: 75vw;
+    margin-bottom: 2rem;
+}
+
+.error-container>:last-child {
+    margin-top: 5rem;
 }

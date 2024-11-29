@@ -5,7 +5,7 @@ type BusquedaRecienteProps = {
     product: Product
 }
 
-const BusquedaReciente = ({ product }: BusquedaRecienteProps) => {
+export const BusquedaReciente = ({ product }: BusquedaRecienteProps) => {
     const handleClick = () => {
         location.href = `/producto/${product.product.id}`;
     }
@@ -20,5 +20,3 @@ const BusquedaReciente = ({ product }: BusquedaRecienteProps) => {
         </div>
     )
 }
-
-export default BusquedaReciente

@@ -1,0 +1,13 @@
+.back-button-container {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+#back-button {
+    display: flex;
+    color: #000;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

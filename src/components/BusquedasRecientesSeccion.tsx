@@ -1,10 +1,9 @@
-import BusquedaReciente from "../components/BusquedaReciente";
-import useFetchProducts from "../lib/useFetchProducts";
+import { BusquedaReciente } from "../components";
+import { useFetchProducts } from "../lib";
 import "../styles/busquedasRecientes.css";
-import Error from "../utils/Error";
-import Loading from "../utils/Loading";
+import { Error, Loading } from "../utils";
 
-const BusquedasRecientesSeccion = () => {
+export const BusquedasRecientesSeccion = () => {
     const {
         data,
         loading,
@@ -25,7 +24,7 @@ const BusquedasRecientesSeccion = () => {
                             <span>Estan son algunos productos que buscaste recientemente</span>
                         </div>
                         {
-                            data.products.map((product) => (
+                            data.map((product) => (
                                 <BusquedaReciente key={product.id} product={product} />
                             ))
                         }
@@ -35,5 +34,3 @@ const BusquedasRecientesSeccion = () => {
         </section>
     )
 }
-
-export default BusquedasRecientesSeccion

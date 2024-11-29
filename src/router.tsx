@@ -1,12 +1,10 @@
 import {
     createBrowserRouter
 } from "react-router-dom";
-import ErrorBoundaryLayout from "./components/ErrorBoundaryLayout";
+import { ErrorBoundaryLayout } from "./components";
 import Layout from "./layout/Layout";
-import { searchLoader } from "./lib/loaders/searchLoader";
-import ProductDetails from "./pages/ProductDetails";
-import SearchPage from './pages/SearchPage';
-import Welcome from "./pages/Welcome";
+import { searchLoader } from "./lib";
+import { ProductDetails, SearchPage, Welcome } from "./pages/";
 
 export const router = createBrowserRouter([
     {
@@ -16,7 +14,7 @@ export const router = createBrowserRouter([
             { path: "/", element: <Welcome /> },
             { path: "/busqueda", loader: searchLoader, element: <SearchPage /> },
             { path: "/producto/:id", element: <ProductDetails /> },
-            { path: "*", element: <><p>Pagina no encontrada</p></> }
+            { path: "*", element: <ErrorBoundaryLayout status="404" statusText="Pagina no encontrada" /> }
         ]
     },
 

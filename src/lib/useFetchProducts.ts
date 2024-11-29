@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
-import { Filter, Product } from "../types/product";
-
-type Data = {
-    products: Product[],
-    filters: Filter[]
-}
+import { Product } from "../types/product";
 
 interface FetchResults {
-    data: Data
+    data: Product[]
     loading: boolean
     error: boolean
 }
@@ -16,18 +11,10 @@ interface useFetchProps {
     search: string
 }
 
-const FILTERS_PERMITED = [
-    "Categorías",
-    "Costo de envío",
-    "Precio",
-    "Descuentos",
-    "Marca"
-];
-
-function useFetchProducts({ search }: useFetchProps): FetchResults {
-    const [data, setData] = useState<Data>();
-    const [loading, setLoading] = useState<boolean>(false);
-    const [error, setError] = useState<boolean>(false);
+export function useFetchProducts({ search }: useFetchProps): FetchResults {
+    const [data, setData] = useState<Product[]>([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
         const LIMIT = 5;
@@ -48,13 +35,7 @@ function useFetchProducts({ search }: useFetchProps): FetchResults {
                 return res.json();
             })
             .then(res => {
-                const filtersArray: Filter[] = res.available_filters.filter((filtro: Filter, index: number, self: Filter[]) =>
-                    FILTERS_PERMITED.includes(filtro.name) && index === self.findIndex((t) => t.name === filtro.name)
-                );
-                const data = {
-                    products: res.results.slice(0, 5),
-                    filters: filtersArray
-                };
+                const data = res.results.slice(0, 6);
                 setData(data);
                 setLoading(false);
             })
@@ -62,13 +43,8 @@ function useFetchProducts({ search }: useFetchProps): FetchResults {
     }, [search]);
 
     return {
-        data: {
-            filters: data?.filters ?? [],
-            products: data?.products ?? []
-        },
+        data: data,
         loading,
         error
     }
 }
-
-export default useFetchProducts;

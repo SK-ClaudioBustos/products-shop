@@ -6,7 +6,7 @@ interface ButtonProps {
     handleOnClick?: () => void;
 }
 
-const Button = ({ children, label, handleOnClick }: ButtonProps) => {
+export const Button = ({ children, label, handleOnClick }: ButtonProps) => {
     return (
         <button className="button" onClick={handleOnClick ?? undefined}>
             {children && children}
@@ -14,5 +14,3 @@ const Button = ({ children, label, handleOnClick }: ButtonProps) => {
         </button>
     )
 }
-
-export default Button

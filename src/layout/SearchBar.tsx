@@ -6,14 +6,10 @@ import "../styles/searchBar.css";
 
 const SearchBar = () => {
     const [search, setSearch] = useState<string>("");
-    const [error, setError] = useState<boolean>(false);
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         if (!search) {
-            setError(true);
-            event.preventDefault();
-        } else {
-            setError(false);
++            event.preventDefault();
         }
     }
 
@@ -41,9 +37,6 @@ const SearchBar = () => {
                         <SearchIcon />
                     </button>
                 </div>
-                {
-                    error && <span style={{ color: "#fff", fontWeight: "lighter" }}>Debe escribir algo antes de buscar</span>
-                }
             </Form>
         </search>
     )

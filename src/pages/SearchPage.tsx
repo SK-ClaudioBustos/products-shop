@@ -1,29 +1,16 @@
 import { useLoaderData } from "react-router-dom";
-import FilterMenu from "../components/search-page/FilterMenu";
-import ProductsList from "../components/search-page/ProductsList";
-import useFetchProducts from "../lib/useFetchProducts";
+import { BackButton, ProductsList } from "../components";
 import "../styles/search.css";
-import Error from "../utils/Error";
-import Loading from "../utils/Loading";
 
-const SearchPage = () => {
+export const SearchPage = () => {
     const { search } = useLoaderData() as any;
-
-    const {
-        data,
-        loading,
-        error
-    } = useFetchProducts({ search });
-
-    if (loading) return <Loading />;
-    if (error) return <Error />;
 
     return (
         <div id="search-content">
-            <FilterMenu filters={data?.filters} />
-            <ProductsList products={data?.products} />
+            <div style={{ width: "75vw", marginBottom: "2rem" }}>
+                <BackButton />
+            </div>
+            <ProductsList search={search} />
         </div>
     )
 }
-
-export default SearchPage

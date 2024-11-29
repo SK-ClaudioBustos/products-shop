@@ -1,19 +1,28 @@
+import { useFetchProducts } from "../../lib";
 import "../../styles/productsList.css";
 import { type Product } from '../../types/product';
-import ProductItem from './ProductItem';
+import { Error, Loading } from "../../utils";
+import { ProductItem } from './ProductItem';
 
 interface ProductsListProps {
-    products: Product[]
+    search: string
 }
 
-const ProductsList = ({ products }: ProductsListProps) => {
+export const ProductsList = ({ search }: ProductsListProps) => {
+
+    const {
+        data,
+        loading,
+        error
+    } = useFetchProducts({ search });
+
+    if (loading) return <Loading />;
+    if (error) return <Error />;
     return (
         <ul className='products-list'>
             {
-                products.length > 0 && products.map((product: Product) => <ProductItem key={product.id} product={product} />)
+                data.length > 0 && data.map((product: Product) => <ProductItem key={product.id} product={product} />)
             }
         </ul>
     )
 }
-
-export default ProductsList

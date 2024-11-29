@@ -5,7 +5,7 @@ interface DetailsHeaderProps {
     component: ProductDetailsComponent
 }
 
-const DetailsHeader = ({ component }: DetailsHeaderProps) => {
+export const DetailsHeader = ({ component }: DetailsHeaderProps) => {
     return (
         <div className="details-header">
             <span>{component.subtitle}</span>
@@ -14,7 +14,7 @@ const DetailsHeader = ({ component }: DetailsHeaderProps) => {
                 component?.reviews && (
                     <div>
                         <span>
-                            {`Stars ${component.reviews.stars}`}
+                            {`${component.reviews.stars} Stars`}
                         </span>
                         <span>
                             {`(${component.reviews.amount})`}
@@ -25,5 +25,3 @@ const DetailsHeader = ({ component }: DetailsHeaderProps) => {
         </div>
     )
 }
-
-export default DetailsHeader

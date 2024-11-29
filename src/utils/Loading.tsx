@@ -3,7 +3,7 @@ import "../styles/loading.css";
 interface LoadingProps {
     descripcion?: string
 }
-const Loading = ({ descripcion = "Cargando" }: LoadingProps) => {
+export const Loading = ({ descripcion = "Cargando" }: LoadingProps) => {
     return (
         <div className='container'>
             <span className='loading-description'><b>{descripcion}</b></span>
@@ -14,5 +14,3 @@ const Loading = ({ descripcion = "Cargando" }: LoadingProps) => {
         </div>
     )
 }
-
-export default Loading

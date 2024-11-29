@@ -40,3 +40,9 @@
         transform: rotate(90deg);
     }
 }
+
+@scope (.container){
+    .container {
+        background-color: var(--background);
+    }
+}

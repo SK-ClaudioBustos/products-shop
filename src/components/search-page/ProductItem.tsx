@@ -5,7 +5,7 @@ interface ProductItemProps {
     product: Product
 }
 
-const ProductItem = ({ product }: ProductItemProps) => {
+export const ProductItem = ({ product }: ProductItemProps) => {
     return (
         <li>
             <a className="product-item" href={`/producto/${product.product?.id}`}>
@@ -18,5 +18,3 @@ const ProductItem = ({ product }: ProductItemProps) => {
         </li>
     )
 }
-
-export default ProductItem
